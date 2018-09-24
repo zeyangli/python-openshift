@@ -1,0 +1,27 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: '2018-09-21T05:52:33Z'
+  labels:
+    app: eureka02
+  name: eureka02
+  namespace: bigdata-stg
+  resourceVersion: ''
+  selfLink: /apis/route.openshift.io/v1/namespaces/bigdata-stg/routes/eureka02
+  uid: 888cd83c-bd62-11e8-bf3d-005056b8b870
+spec:
+  host: eureka02-bigdata-stg.svc.yk.com
+  to:
+    kind: Service
+    name: eureka02
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+        - lastTransitionTime: '2018-09-21T05:52:33Z'
+          status: 'True'
+          type: Admitted
+      host: eureka02-bigdata-stg.svc.yk.com
+      routerName: router
+      wildcardPolicy: None
